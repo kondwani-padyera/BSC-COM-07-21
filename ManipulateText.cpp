@@ -34,6 +34,8 @@ int main()
 
     // Capitalizes the second letter of each word of the file
     capitalizeSecond(fileData);
+
+    // Close file
     file.close();
 }
 
@@ -71,11 +73,13 @@ int calculateWords(const string text)
     int count = 0;
     for (int i = 0; i < text.length(); i++)
     {
+        // Count number of spaces in the sentence 
         if (isblank(text[i]))
         {
             count++;
         }
     }
+    // Spaces in a sentence are one less than the number of words
     return count + 1;
 }
 
@@ -93,6 +97,7 @@ void capitalizeSecond(string text)
 {
     for (int i = 0, index = 0; i < text.length(); i++, index++)
     {
+        // Capitalize the second character in each word
         if (index == 1)
         {
             text[i] = toupper(text[i]);
