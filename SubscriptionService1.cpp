@@ -4,10 +4,11 @@ using namespace std;
 
 int main()
 {
-    // Generate random number between 0 and 11
+    // Generate a random number between 0 and 11
     srand(time(0));
     int daysUntilExpiration = rand() % 12;
 
+    // Check the condition of the service and then inform the user
     switch (daysUntilExpiration)
     {
     case 0:

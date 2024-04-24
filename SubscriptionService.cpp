@@ -8,7 +8,7 @@ int main()
     srand(time(0));
     int daysUntilExpiration = rand() % 12;
 
-    // 
+    // Check the condition of the service and inform the user
     if (daysUntilExpiration == 0)
     {
         cout << "Your subscription has expired." << endl;
