@@ -2,3 +2,6 @@ logs/
 
 # Executable files
 *.exe
+
+# Folder for configuration files
+.vscode/
