@@ -7,7 +7,7 @@ void displayMenu();
 double calculateSquare(double length);
 double calculateRectangle(double length, double width);
 double calculateTriangle(double height, double base);
-void checkChoice(double *choice);
+void checkChoice(double *choice, string message = "Enter valid length: ");
 
 int main()
 {
@@ -41,6 +41,7 @@ void displayMenu()
          << endl;
     cout << "Enter selection: ";
     cin >> choice;
+    checkChoice((double *)&choice, "Enter a number between 1 and 4");
 
     switch (choice)
     {
@@ -82,7 +83,7 @@ void displayMenu()
 }
 
 // Checks if input is valid
-void checkChoice(double *choice)
+void checkChoice(double *choice, string message)
 {
     while (true)
     {
@@ -90,7 +91,7 @@ void checkChoice(double *choice)
         {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Enter valid length: ";
+            cout << message;
             cin >> *choice;                              
         }
         else
