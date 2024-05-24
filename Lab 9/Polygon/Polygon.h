@@ -7,4 +7,5 @@ protected:
 
 public:
     void SetValues(int width, int height);
+    virtual int Area();
 };
