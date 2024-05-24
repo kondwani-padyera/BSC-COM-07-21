@@ -10,7 +10,7 @@ int main()
     Polygon *pPoly2 = &trgl;
     pPoly1->SetValues(4, 5);
     pPoly2->SetValues(4, 5);
-    cout << rect.Area() << '\n';
-    cout << trgl.Area() << '\n';
+    pPoly1->PrintArea();
+    pPoly2->PrintArea();
     return 0;
 }
