@@ -5,3 +5,6 @@ logs/
 
 # Folder for configuration files
 .vscode/
+
+# Text files
+*.txt
